@@ -87,6 +87,9 @@ web_modules/
 .next
 out
 
+# trunk
+.trunk
+
 # Nuxt.js build / generate output
 .nuxt
 dist
