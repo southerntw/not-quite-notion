@@ -1,9 +1,11 @@
-This is a Next.js 13 practice project bootstrapped with `create-next-app` 
+This is a Next.js 13 practice project bootstrapped with `create-next-app`
 
-Credits goes to *codewithantonio* for his guidance on this project.
+Credits goes to _codewithantonio_ for his guidance on this project.
 
 ## Getting started
+
 To run the development server:
+
 ```
 npm run dev
 # or
