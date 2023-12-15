@@ -6,7 +6,9 @@ import { Id } from "@/convex/_generated/dataModel";
 import { Toolbar } from "@/app/(main)/_components/toolbar";
 import { Cover } from "@/components/cover";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Editor } from "@/components/editor";
+import dynamic from "next/dynamic";
+import { useMemo } from "react";
+
 
 interface DocumentIdPageProps {
   params: {
@@ -15,6 +17,8 @@ interface DocumentIdPageProps {
 }
 
 const DocumentIdPage = ({ params }: DocumentIdPageProps) => {
+  const Editor = useMemo(() => dynamic(() => import("@/components/editor"), { ssr: false }), [])
+
   const document = useQuery(api.documents.getById, {
     documentId: params.documentId,
   });
